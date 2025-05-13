@@ -56,24 +56,6 @@ LivrariaApi/
 
 ---
 
-▶️ Como executar o projeto localmente
-1. Clonar o repositório
-
-git clone https://github.com/seu-usuario/livraria-api.git
-cd livraria-api
-
-2. Executar o projeto
-
-dotnet run
-
-3. Testar no navegador (Swagger)
-
-Acesse:
-
-https://localhost:7287/swagger
-
----
-
 ⚠️ Observações
 
     Os dados são armazenados em memória, ou seja, se perdem ao reiniciar a aplicação.
