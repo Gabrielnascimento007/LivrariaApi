@@ -36,6 +36,8 @@ API REST desenvolvida em ASP.NET Core para gerenciamento de livros em uma livrar
   "quantidade": 50
 }
 
+---
+
 📂 Organização do Projeto
 
 LivrariaApi/
@@ -53,6 +55,8 @@ LivrariaApi/
 ├── Program.cs
 ├── Startup.cs (caso esteja separado)
 
+---
+
 🧪 Como testar localmente
 
     Clone o repositório:
@@ -67,6 +71,8 @@ dotnet run
     Acesse o Swagger para testar a API:
 
 https://localhost:7287/swagger
+
+---
 
 💡 Observações
 
