@@ -1,31 +1,31 @@
 # 📚 Livraria API
 
-API REST desenvolvida em ASP.NET Core para gerenciamento de livros em uma livraria online. Permite operações de **criação**, **edição**, **listagem**, **busca por ID** e **exclusão** de livros, com persistência simulada em memória.
+API REST em ASP.NET Core para gerenciamento de livros em uma livraria online. Permite criar, listar, editar e remover livros com armazenamento em memória (simulado).
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-- .NET 7 / ASP.NET Core Web API
+- ASP.NET Core (.NET 7)
 - C#
-- Swagger (Swashbuckle) para testes e documentação
-- Simulação de repositório em memória (`static List<T>`)
+- Swagger (Swashbuckle)
+- Simulação de persistência com lista em memória (`static List<T>`)
 
 ---
 
-## 🔧 Funcionalidades da API
+## 🔧 Funcionalidades
 
-| Verbo HTTP | Rota               | Ação                                  |
-|------------|--------------------|----------------------------------------|
-| `GET`      | `/api/Livro`       | Lista todos os livros                  |
-| `GET`      | `/api/Livro/{id}`  | Retorna um livro específico por ID     |
-| `POST`     | `/api/Livro`       | Cria um novo livro                     |
-| `PUT`      | `/api/Livro/{id}`  | Atualiza um livro existente            |
-| `DELETE`   | `/api/Livro/{id}`  | Remove um livro do sistema             |
+| Verbo HTTP | Rota              | Ação                            |
+|------------|-------------------|----------------------------------|
+| `GET`      | `/api/Livro`      | Lista todos os livros            |
+| `GET`      | `/api/Livro/{id}` | Busca um livro por ID            |
+| `POST`     | `/api/Livro`      | Cria um novo livro               |
+| `PUT`      | `/api/Livro/{id}` | Atualiza dados de um livro       |
+| `DELETE`   | `/api/Livro/{id}` | Remove um livro da listagem      |
 
 ---
 
-## 🧱 Estrutura Esperada de um Livro
+## 📘 Estrutura esperada de um Livro
 
 ```json
 {
@@ -35,10 +35,10 @@ API REST desenvolvida em ASP.NET Core para gerenciamento de livros em uma livrar
   "preco": 79.90,
   "quantidade": 50
 }
-
+```
 ---
 
-📂 Organização do Projeto
+🗂️ Estrutura do Projeto
 
 LivrariaApi/
 ├── Controllers/
@@ -53,31 +53,31 @@ LivrariaApi/
 ├── Models/
 │   └── Livro.cs
 ├── Program.cs
-├── Startup.cs (caso esteja separado)
 
 ---
 
-🧪 Como testar localmente
-
-    Clone o repositório:
+▶️ Como executar o projeto localmente
+1. Clonar o repositório
 
 git clone https://github.com/seu-usuario/livraria-api.git
 cd livraria-api
 
-    Rode a aplicação:
+2. Executar o projeto
 
 dotnet run
 
-    Acesse o Swagger para testar a API:
+3. Testar no navegador (Swagger)
+
+Acesse:
 
 https://localhost:7287/swagger
 
 ---
 
-💡 Observações
+⚠️ Observações
 
-    A API usa um repositório em memória, então os dados serão perdidos ao reiniciar o servidor.
+    Os dados são armazenados em memória, ou seja, se perdem ao reiniciar a aplicação.
 
-    Ideal para protótipos, testes locais ou desafios de programação.
+    Ideal para testes locais, prototipagem e desafios técnicos.
 
-    Caso deseje persistência real, considere integrar com o Entity Framework Core e um banco de dados (SQL Server, SQLite, etc).
+    Para uso real, recomenda-se integrar com o Entity Framework Core e um banco de dados relacional.
